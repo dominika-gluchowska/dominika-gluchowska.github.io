@@ -1,0 +1,46 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+/* Animation styles */
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.vector-element {
+  opacity: 0;
+  transform-origin: center;
+  animation: pop 0.6s forwards;
+  animation-delay: calc(var(--index, 0) * 100ms);
+}
+.vector-element:nth-child(1) {
+  --index: 1;
+}
+.vector-element:nth-child(2) {
+  --index: 2;
+}
+.vector-element:nth-child(3) {
+  --index: 3;
+}
+.vector-element:nth-child(4) {
+  --index: 4;
+}
+.vector-element:nth-child(5) {
+  --index: 5;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
